@@ -1,4 +1,4 @@
-../app/.gradle
+.gradle/
 app/build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -53,6 +53,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-#
-app/.gradle
