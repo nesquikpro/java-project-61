@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("com.github.ben-manes.versions") version "0.53.0"
+    id("org.sonarqube") version "7.0.0.6105"
     application
 }
 
@@ -27,4 +28,11 @@ application {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "nesquikpro_java-project-61")
+        property("sonar.organization", "nesquik")
+    }
 }
