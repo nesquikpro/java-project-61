@@ -1,8 +1,11 @@
 clean:
-	gradlew clean
+	./gradlew clean
 
-build:
-	gradlew clean build
+build: clean
+	./gradlew build
 
 run:
-	gradlew run
+	./gradlew run
+
+run-app:
+	java -cp build/classes/java/main hexlet.code.App

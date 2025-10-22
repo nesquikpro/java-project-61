@@ -11,3 +11,5 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=nesquikpro_java-project-61&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=nesquikpro_java-project-61)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=nesquikpro_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=nesquikpro_java-project-61)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=nesquikpro_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=nesquikpro_java-project-61)
+
+[![asciicast](https://asciinema.org/a/4h2F4rXqpxK69x8TiNt82cBuv.svg)](https://asciinema.org/a/4h2F4rXqpxK69x8TiNt82cBuv)
