@@ -26,14 +26,14 @@ public final class CalculatorGame extends Game {
             System.out.print("Your answer: ");
             String userReply = USER_INPUT.nextLine();
 
-            if (Integer.parseInt(userReply) == calculateExpression(
-                    operator,
+            int calculatedAnswer = calculateExpression(operator,
                     firstNumber,
-                    secondNumber)) {
+                    secondNumber);
+            if (Integer.parseInt(userReply) == calculatedAnswer) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userReply + "' is wrong answer ;(. "
-                        + "Correct answer was '" + userReply + "'.\n"
+                        + "Correct answer was '" + calculatedAnswer + "'.\n"
                         + "Let's try again, Sam!");
                 System.exit(0);
             }
