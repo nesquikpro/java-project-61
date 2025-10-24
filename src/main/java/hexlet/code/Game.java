@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.interfaces.GameInterface;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public abstract class Game implements GameInterface {
@@ -9,6 +10,11 @@ public abstract class Game implements GameInterface {
      * Max random number.
      */
     protected static final int MAX_RANDOM_NUMBER = 100;
+
+    /**
+     * Get random numbers.
+     */
+    protected static final Random RANDOM = new Random();
 
     /**
      * Questions count.
@@ -58,6 +64,7 @@ public abstract class Game implements GameInterface {
     @Override
     public void congratulateUser() {
         System.out.println("Congratulations, " + getUserName() + "!");
+        System.out.println();
     }
 
     /**

@@ -15,7 +15,8 @@ public final class App {
      * @param args
      */
     public static void main(final String[] args) {
-        while (true) {
+        boolean running = true;
+        while (running) {
             Scanner in = new Scanner(System.in);
 
             System.out.println("Please enter the game number and press Enter.");
@@ -30,7 +31,7 @@ public final class App {
 
             switch (userChoice) {
                 case "0":
-                    System.exit(0);
+                    running = false;
                     break;
                 case "1":
                     break;

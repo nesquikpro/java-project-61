@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Game;
 
-import java.util.Random;
-
 public final class CalculatorGame extends Game {
     /**
      * Start Calculator Game.
@@ -13,13 +11,12 @@ public final class CalculatorGame extends Game {
         super.startGame();
 
         char[] operators = {'+', '-', '*'};
-        Random rnd = new Random();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int firstNumber = rnd.nextInt(MAX_RANDOM_NUMBER);
-            int secondNumber = rnd.nextInt(MAX_RANDOM_NUMBER);
+            int firstNumber = RANDOM.nextInt(MAX_RANDOM_NUMBER);
+            int secondNumber = RANDOM.nextInt(MAX_RANDOM_NUMBER);
 
-            int operatorIndex = rnd.nextInt(operators.length);
+            int operatorIndex = RANDOM.nextInt(operators.length);
             char operator = operators[operatorIndex];
 
             String expression = firstNumber + " " + String.valueOf(operator)
@@ -57,7 +54,7 @@ public final class CalculatorGame extends Game {
      * @param operator operator of expression.
      * @param firstNumber first Number.
      * @param secondNumber second Number.
-     * @return check the user's reply with the answer.
+     * @return calculated result.
      */
     private static int calculateExpression(final char operator,
                                                final int firstNumber,
@@ -66,7 +63,8 @@ public final class CalculatorGame extends Game {
             case '+' -> firstNumber + secondNumber;
             case '-' -> firstNumber - secondNumber;
             case '*' -> firstNumber * secondNumber;
-            default -> 0;
+            default -> throw new IllegalArgumentException("Invalid operator: "
+                    + operator);
         };
     }
 }

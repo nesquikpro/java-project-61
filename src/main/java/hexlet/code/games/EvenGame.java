@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Game;
 
-import java.util.Random;
-
 public final class EvenGame extends Game {
     /**
      * Start Even Game.
@@ -11,9 +9,8 @@ public final class EvenGame extends Game {
     @Override
     public void startGame() {
         super.startGame();
-        Random rnd = new Random();
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            int randomNumber = rnd.nextInt(MAX_RANDOM_NUMBER);
+            int randomNumber = RANDOM.nextInt(MAX_RANDOM_NUMBER);
             System.out.println("Question: " + randomNumber);
 
             System.out.print("Your answer: ");
