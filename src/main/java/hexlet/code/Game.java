@@ -24,7 +24,7 @@ public abstract class Game implements GameInterface {
     /**
      * Username.
      */
-    private static String userName;
+    private String userName;
 
     /**
      * User input.

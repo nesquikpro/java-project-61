@@ -19,8 +19,8 @@ public final class CalculatorGame extends Game {
             int operatorIndex = RANDOM.nextInt(operators.length);
             char operator = operators[operatorIndex];
 
-            String expression = firstNumber + " " + String.valueOf(operator)
-                    + " " + secondNumber;
+            String expression = firstNumber + " " + operator + " "
+                    + secondNumber;
             System.out.println("Question: " + expression);
 
             System.out.print("Your answer: ");
