@@ -12,4 +12,8 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=nesquikpro_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=nesquikpro_java-project-61)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=nesquikpro_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=nesquikpro_java-project-61)
 
+### Even Game
 [![asciicast](https://asciinema.org/a/4h2F4rXqpxK69x8TiNt82cBuv.svg)](https://asciinema.org/a/4h2F4rXqpxK69x8TiNt82cBuv)
+
+### Calculator Game
+[![asciicast](https://asciinema.org/a/wj9hd6SziJBEPnQkgG6zLQ8bb.svg)](https://asciinema.org/a/wj9hd6SziJBEPnQkgG6zLQ8bb)
