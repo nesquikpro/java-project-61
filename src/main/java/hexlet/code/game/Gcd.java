@@ -1,12 +1,12 @@
-package hexlet.code.games;
+package hexlet.code.game;
 
 import hexlet.code.Game;
 
-public class GCD extends Game {
+public class Gcd extends Game {
     /**
      * Correct answer to the question.
      */
-    private String currentAnswer;
+    private String correctAnswer;
 
     /**
      * Printing rules for game.
@@ -22,10 +22,10 @@ public class GCD extends Game {
      * @return game question.
      */
     @Override
-    public String getQuestion() {
+    public String generateQuestion() {
         int a = RANDOM.nextInt(MAX_RANDOM_NUMBER);
         int b = RANDOM.nextInt(MAX_RANDOM_NUMBER);
-        currentAnswer = String.valueOf(getGCD(a, b));
+        correctAnswer = String.valueOf(getGCD(a, b));
         return a + " " + b;
     }
 
@@ -36,7 +36,7 @@ public class GCD extends Game {
      */
     @Override
     public boolean isCorrectAnswer(final String userAnswer) {
-        return userAnswer.equalsIgnoreCase(currentAnswer);
+        return userAnswer.equalsIgnoreCase(correctAnswer);
     }
 
     /**
@@ -45,7 +45,7 @@ public class GCD extends Game {
      */
     @Override
     public String getCorrectAnswer() {
-        return currentAnswer;
+        return correctAnswer;
     }
 
     private static int getGCD(final int a, final int b) {

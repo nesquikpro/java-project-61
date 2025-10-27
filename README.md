@@ -17,3 +17,9 @@
 
 ### Calculator Game
 [![asciicast](https://asciinema.org/a/wj9hd6SziJBEPnQkgG6zLQ8bb.svg)](https://asciinema.org/a/wj9hd6SziJBEPnQkgG6zLQ8bb)
+
+### Greatest Common Divisor (GCD) Game
+[![asciicast](https://asciinema.org/a/brtJWjxLvu4TB0AbupWqgjjiq.svg)](https://asciinema.org/a/brtJWjxLvu4TB0AbupWqgjjiq)
+
+### Arithmetic Progression Game
+[![asciicast](https://asciinema.org/a/PpByYoBjcxLZ19bYUint1GX4a.svg)](https://asciinema.org/a/PpByYoBjcxLZ19bYUint1GX4a)

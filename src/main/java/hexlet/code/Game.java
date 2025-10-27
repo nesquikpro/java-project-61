@@ -40,7 +40,7 @@ public abstract class Game implements IGame {
         printRules();
 
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            String question = getQuestion();
+            String question = generateQuestion();
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
             String userAnswer = USER_INPUT.nextLine();
@@ -74,8 +74,7 @@ public abstract class Game implements IGame {
      * Printing rules for game.
      */
     @Override
-    public void printRules() {
-    }
+    public abstract void printRules();
 
     /**
      * Get User.
@@ -88,7 +87,7 @@ public abstract class Game implements IGame {
      * Get game question.
      * @return game question.
      */
-    public abstract String getQuestion();
+    public abstract String generateQuestion();
 
     /**
      * Check if User answer is true.

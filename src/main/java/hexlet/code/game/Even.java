@@ -1,4 +1,4 @@
-package hexlet.code.games;
+package hexlet.code.game;
 
 import hexlet.code.Game;
 
@@ -6,16 +6,16 @@ public class Even extends Game {
     /**
      * Correct answer to the question.
      */
-    private String currentAnswer;
+    private String correctAnswer;
 
     /**
      * Get game question.
      * @return game question.
      */
     @Override
-    public String getQuestion() {
+    public String generateQuestion() {
         int number = RANDOM.nextInt(MAX_RANDOM_NUMBER);
-        currentAnswer = checkEven(number) ? "yes" : "no";
+        correctAnswer = checkEven(number) ? "yes" : "no";
         return String.valueOf(number);
     }
 
@@ -26,7 +26,7 @@ public class Even extends Game {
      */
     @Override
     public boolean isCorrectAnswer(final String userAnswer) {
-        return userAnswer.equalsIgnoreCase(currentAnswer);
+        return userAnswer.equalsIgnoreCase(correctAnswer);
     }
 
     /**
@@ -35,7 +35,7 @@ public class Even extends Game {
      */
     @Override
     public String getCorrectAnswer() {
-        return currentAnswer;
+        return correctAnswer;
     }
 
     /**

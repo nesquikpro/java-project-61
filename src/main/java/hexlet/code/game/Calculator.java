@@ -1,4 +1,4 @@
-package hexlet.code.games;
+package hexlet.code.game;
 
 import hexlet.code.Game;
 
@@ -13,7 +13,7 @@ public class Calculator extends Game {
      * @return game question.
      */
     @Override
-    public String getQuestion() {
+    public String generateQuestion() {
         char[] operators = {'+', '-', '*'};
         int firstNumber = RANDOM.nextInt(MAX_RANDOM_NUMBER);
         int secondNumber = RANDOM.nextInt(MAX_RANDOM_NUMBER);

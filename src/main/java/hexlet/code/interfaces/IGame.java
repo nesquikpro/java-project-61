@@ -17,7 +17,7 @@ public interface IGame {
      * Get game question.
      * @return game question.
      */
-    String getQuestion();
+    String generateQuestion();
     /**
      * Check if the true answer.
      * @param userAnswer user answer.
