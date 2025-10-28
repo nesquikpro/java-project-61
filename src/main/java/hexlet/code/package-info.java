@@ -1,5 +1,4 @@
 /**
- * Contains classes for Brain Games application.
- *
+ * Contains the game menu.
  */
 package hexlet.code;

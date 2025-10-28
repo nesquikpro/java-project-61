@@ -1,6 +1,12 @@
 package  hexlet.code;
 
-import hexlet.code.game.*;
+
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.CalculatorGame;
+import hexlet.code.games.GcdGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeGame;
+
 
 import java.util.Scanner;
 
@@ -11,12 +17,12 @@ public final class App {
 
     /**
      * Entry point of the Brain Games Application.
-     * @param args args.
+     * @param args arguments not used.
      */
     public static void main(final String[] args) {
         boolean running = true;
         while (running) {
-            Scanner in = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("1 - Greet");
@@ -28,7 +34,7 @@ public final class App {
             System.out.println("0 - Exit");
             System.out.print("Your choice: ");
 
-            String userChoice = in.nextLine();
+            String userChoice = scanner.nextLine();
             System.out.println();
 
             switch (userChoice) {
@@ -38,27 +44,23 @@ public final class App {
                 case "1":
                     break;
                 case "2":
-                    Even evenGame = new Even();
-                    evenGame.startGame();
+                    EvenGame.startGame();
                     break;
                 case "3":
-                    Calculator calcGame = new Calculator();
-                    calcGame.startGame();
+                    CalculatorGame.startGame();
                     break;
                 case "4":
-                    Gcd gcdGame = new Gcd();
-                    gcdGame.startGame();
+                    GcdGame.startGame();
                     break;
                 case "5":
-                    Progression progression = new Progression();
-                    progression.startGame();
+                    ProgressionGame.startGame();
                     break;
                 case "6":
-                    Prime prime = new Prime();
-                    prime.startGame();
+                    PrimeGame.startGame();
                     break;
                 default:
                     System.out.println("Invalid choice. Try again.");
+                    System.out.println();
                     break;
             }
         }
