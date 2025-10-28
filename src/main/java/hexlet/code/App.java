@@ -1,9 +1,6 @@
 package  hexlet.code;
 
-import hexlet.code.game.Calculator;
-import hexlet.code.game.Even;
-import hexlet.code.game.Gcd;
-import hexlet.code.game.Progression;
+import hexlet.code.game.*;
 
 import java.util.Scanner;
 
@@ -14,7 +11,7 @@ public final class App {
 
     /**
      * Entry point of the Brain Games Application.
-     * @param args
+     * @param args args.
      */
     public static void main(final String[] args) {
         boolean running = true;
@@ -27,6 +24,7 @@ public final class App {
             System.out.println("3 - Calc");
             System.out.println("4 - GCD");
             System.out.println("5 - Progression");
+            System.out.println("6 - Prime");
             System.out.println("0 - Exit");
             System.out.print("Your choice: ");
 
@@ -54,6 +52,10 @@ public final class App {
                 case "5":
                     Progression progression = new Progression();
                     progression.startGame();
+                    break;
+                case "6":
+                    Prime prime = new Prime();
+                    prime.startGame();
                     break;
                 default:
                     System.out.println("Invalid choice. Try again.");

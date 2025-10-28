@@ -10,6 +10,7 @@ public class Progression extends Game {
      * Correct answer to the question.
      */
     private String correctAnswer;
+
     /**
      * Max progression length.
      */

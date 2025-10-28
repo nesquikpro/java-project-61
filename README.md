@@ -23,3 +23,6 @@
 
 ### Arithmetic Progression Game
 [![asciicast](https://asciinema.org/a/PpByYoBjcxLZ19bYUint1GX4a.svg)](https://asciinema.org/a/PpByYoBjcxLZ19bYUint1GX4a)
+
+### Is it a prime number? Game
+[![asciicast](https://asciinema.org/a/zzhsMgSj0QOC4JFVxZDA2VEWg.svg)](https://asciinema.org/a/zzhsMgSj0QOC4JFVxZDA2VEWg)
