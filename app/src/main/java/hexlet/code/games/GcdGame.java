@@ -14,11 +14,11 @@ public final class GcdGame {
     /**
      * Start of the game.
      */
+    @SuppressWarnings("java:S2245")
     public static void startGame() {
         int rounds = GameEngine.getRoundsCount();
         int randomNumbers = GameEngine.getRandomNumbers();
         String[][] gameQuestions = new String[rounds][2];
-        // NOSONAR
         Random rand = new Random();
 
         for (int i = 0; i < rounds; i++) {
