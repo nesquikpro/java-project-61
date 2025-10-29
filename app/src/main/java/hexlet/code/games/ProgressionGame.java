@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
 
-import java.util.Random;
-
 public final class ProgressionGame {
     /**
      * Game description.
@@ -19,17 +17,14 @@ public final class ProgressionGame {
     /**
      * Start of the game.
      */
-    @SuppressWarnings("java:S2245")
     public static void startGame() {
         int rounds = GameEngine.getRoundsCount();
-        int randomNumbers = GameEngine.getRandomNumbers();
         String[][] gameQuestions = new String[rounds][2];
-        Random rand = new Random();
 
         for (int i = 0; i < rounds; i++) {
-            int a = rand.nextInt(randomNumbers);
-            int d = rand.nextInt(PROGRESS_LENGTH);
-            int hiddenNumber = rand.nextInt(PROGRESS_LENGTH);
+            int a = GameEngine.getRandomNumber();
+            int d = GameEngine.getRandomNumber(PROGRESS_LENGTH);
+            int hiddenNumber = GameEngine.getRandomNumber(PROGRESS_LENGTH);
 
             StringBuilder sb = new StringBuilder();
             String correctAnswer = "";

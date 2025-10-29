@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
 
-import java.util.Random;
-
 public final class GcdGame {
     /**
      * Game description.
@@ -14,16 +12,13 @@ public final class GcdGame {
     /**
      * Start of the game.
      */
-    @SuppressWarnings("java:S2245")
     public static void startGame() {
         int rounds = GameEngine.getRoundsCount();
-        int randomNumbers = GameEngine.getRandomNumbers();
         String[][] gameQuestions = new String[rounds][2];
-        Random rand = new Random();
 
         for (int i = 0; i < rounds; i++) {
-            int a = rand.nextInt(randomNumbers);
-            int b = rand.nextInt(randomNumbers);
+            int a = GameEngine.getRandomNumber();
+            int b = GameEngine.getRandomNumber();
             int correctAnswer = getGCD(a, b);
 
             gameQuestions[i][0] = a + " " + b;

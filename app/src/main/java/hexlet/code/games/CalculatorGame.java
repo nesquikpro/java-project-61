@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
 
-import java.util.Random;
-
 public final class CalculatorGame {
     /**
      * Game description.
@@ -19,17 +17,15 @@ public final class CalculatorGame {
     /**
      * Start of the game.
      */
-    @SuppressWarnings("java:S2245")
     public static void startGame() {
         int rounds = GameEngine.getRoundsCount();
-        int randomNumbers = GameEngine.getRandomNumbers();
         String[][] gameQuestions = new String[rounds][2];
-        Random rand = new Random();
 
         for (int i = 0; i < rounds; i++) {
-            int firstNumber = rand.nextInt(randomNumbers);
-            int secondNumber = rand.nextInt(randomNumbers);
-            String operator = OPERATORS[rand.nextInt(OPERATORS.length)];
+            int firstNumber = GameEngine.getRandomNumber();
+            int secondNumber = GameEngine.getRandomNumber();
+            String operator = OPERATORS[GameEngine.getRandomNumber(
+                    OPERATORS.length)];
 
             int result = switch (operator) {
                 case "+" -> firstNumber + secondNumber;

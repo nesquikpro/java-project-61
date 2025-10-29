@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
 
-import java.util.Random;
-
 public final class EvenGame {
     /**
      * Game description.
@@ -14,15 +12,12 @@ public final class EvenGame {
     /**
      * Start of the game.
      */
-    @SuppressWarnings("java:S2245")
     public static void startGame() {
         int rounds = GameEngine.getRoundsCount();
-        int randomNumbers = GameEngine.getRandomNumbers();
         String[][] gameQuestions = new String[rounds][2];
-        Random rand = new Random();
 
         for (int i = 0; i < rounds; i++) {
-            int randomNumber = rand.nextInt(randomNumbers);
+            int randomNumber = GameEngine.getRandomNumber();
             String correctAnswer = randomNumber % 2 == 0 ? "yes" : "no";
             gameQuestions[i][0] = String.valueOf(randomNumber);
             gameQuestions[i][1] = correctAnswer;

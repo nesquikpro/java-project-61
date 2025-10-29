@@ -1,10 +1,16 @@
 package hexlet.code.core;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public final class GameEngine {
     /**
-     * Random numbers from 0 to 100.
+     * Generate random number.
+     */
+    private static Random random = new Random();
+
+    /**
+     * Max numbers from 0 to 100.
      */
     private static final int RANDOM_NUMBERS = 101;
 
@@ -71,10 +77,18 @@ public final class GameEngine {
     }
 
     /**
-     * @return a random number from 0 to 100.
+     * @param range for random numbers.
+     * @return number from range.
      */
-    public static int getRandomNumbers() {
-        return RANDOM_NUMBERS;
+    public static int getRandomNumber(final int range) {
+        return random.nextInt(range);
+    }
+
+    /**
+     * @return number from 0 to 100.
+     */
+    public static int getRandomNumber() {
+        return random.nextInt(RANDOM_NUMBERS);
     }
 
     private GameEngine() {

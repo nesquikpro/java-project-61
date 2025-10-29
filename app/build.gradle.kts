@@ -37,3 +37,11 @@ sonar {
         property("sonar.organization", "nesquik")
     }
 }
+
+configurations {
+    all {
+        resolutionStrategy {
+            disableDependencyVerification() // Sensitive: dependency verification is disabled
+        }
+    }
+}
