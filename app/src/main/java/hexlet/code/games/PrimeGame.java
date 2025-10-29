@@ -8,8 +8,8 @@ public final class PrimeGame {
     /**
      * Game description.
      */
-    private static final String DESCRIPTION = "What number is"
-            + " missing in the progression?";
+    private static final String DESCRIPTION = "Answer 'yes' if given "
+            + "number is prime. Otherwise answer 'no'.";
 
     /**
      * Start of the game.

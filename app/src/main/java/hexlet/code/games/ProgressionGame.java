@@ -8,8 +8,8 @@ public final class ProgressionGame {
     /**
      * Game description.
      */
-    private static final String DESCRIPTION = "What number is"
-            + " missing in the progression?";
+    private static final String DESCRIPTION = "What number is "
+            + "missing in the progression?";
 
     /**
      * Size of progression.
