@@ -20,10 +20,12 @@ public final class App {
      * @param args arguments not used.
      */
     public static void main(final String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Brain Games!");
+
         boolean running = true;
         while (running) {
-            Scanner scanner = new Scanner(System.in);
-
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("1 - Greet");
             System.out.println("2 - Even");
