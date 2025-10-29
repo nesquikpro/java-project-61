@@ -50,7 +50,7 @@ public final class GameEngine {
         }
 
         System.out.println("Congratulations, " + userName + "!");
-        System.out.println();
+        System.exit(0);
     }
 
     private static void greetUser() {
