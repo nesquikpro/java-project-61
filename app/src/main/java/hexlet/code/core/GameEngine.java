@@ -53,7 +53,10 @@ public final class GameEngine {
         System.exit(0);
     }
 
-    private static void greetUser() {
+    /**
+     * Greeting user.
+     */
+    public static void greetUser() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         userName = USER_INPUT.nextLine();

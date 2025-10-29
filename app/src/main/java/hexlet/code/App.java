@@ -6,6 +6,7 @@ import hexlet.code.games.CalculatorGame;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.ProgressionGame;
 import hexlet.code.games.PrimeGame;
+import hexlet.code.core.GameEngine;
 
 
 import java.util.Scanner;
@@ -46,6 +47,7 @@ public final class App {
                     running = false;
                     break;
                 case "1":
+                    GameEngine.greetUser();
                     break;
                 case "2":
                     EvenGame.startGame();
