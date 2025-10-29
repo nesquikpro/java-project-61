@@ -34,6 +34,10 @@ public final class App {
             System.out.println("0 - Exit");
             System.out.print("Your choice: ");
 
+            if (!scanner.hasNextInt()) {
+                return;
+            }
+
             String userChoice = scanner.nextLine();
             System.out.println();
 
