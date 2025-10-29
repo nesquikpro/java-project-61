@@ -48,6 +48,7 @@ public final class App {
                     break;
                 case "1":
                     GameEngine.greetUser();
+                    System.exit(0);
                     break;
                 case "2":
                     EvenGame.startGame();
