@@ -22,8 +22,6 @@ public final class App {
     public static void main(final String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the Brain Games!");
-
         boolean running = true;
         while (running) {
             System.out.println("Please enter the game number and press Enter.");
