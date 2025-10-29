@@ -23,6 +23,7 @@ public final class CalculatorGame {
         int rounds = GameEngine.getRoundsCount();
         int randomNumbers = GameEngine.getRandomNumbers();
         String[][] gameQuestions = new String[rounds][2];
+        // NOSONAR
         Random rand = new Random();
 
         for (int i = 0; i < rounds; i++) {
