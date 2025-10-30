@@ -39,9 +39,9 @@ public final class CalculatorGame {
     private static int calculate(final String operator,
                                  final int a, final int b) {
         return switch (operator) {
-            case " + " -> a + b;
-            case " - " -> a - b;
-            case " * " -> a * b;
+            case "+" -> a + b;
+            case "-" -> a - b;
+            case "*" -> a * b;
             default -> throw new IllegalArgumentException(
                     "Invalid operator: " + operator);
         };
