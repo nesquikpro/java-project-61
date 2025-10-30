@@ -9,11 +9,18 @@ public class Utils {
 
     private static final int DEFAULT_MAX = 100;
 
+    /**
+     * @return generating a random number from 0 to 100.
+     */
     public static int getDefaultRandomNumber() {
         return random.nextInt(DEFAULT_MAX - DEFAULT_MIN + 1) + DEFAULT_MIN;
     }
 
+    /**
+     * @param max number.
+     * @return generating a random number in the range [0, max)
+     */
     public static int getRandomNumberFromRange(int max) {
-        return random.nextInt(max - DEFAULT_MIN + 1) + DEFAULT_MIN;
+        return random.nextInt(max);
     }
 }
