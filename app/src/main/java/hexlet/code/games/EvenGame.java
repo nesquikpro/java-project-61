@@ -1,11 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
+import hexlet.code.utils.Utils;
 
 public final class EvenGame {
-    /**
-     * Game description.
-     */
     private static final String DESCRIPTION = "Answer 'yes' if the number "
             + "is even, otherwise answer 'no'.";
 
@@ -13,11 +11,10 @@ public final class EvenGame {
      * Start of the game.
      */
     public static void startGame() {
-        int rounds = GameEngine.getRoundsCount();
-        String[][] gameQuestions = new String[rounds][2];
+        String[][] gameQuestions = new String[GameEngine.ROUNDS_COUNT][2];
 
-        for (int i = 0; i < rounds; i++) {
-            int randomNumber = GameEngine.getRandomNumber();
+        for (int i = 0; i < GameEngine.ROUNDS_COUNT; i++) {
+            int randomNumber = Utils.getDefaultRandomNumber();
             String correctAnswer = randomNumber % 2 == 0 ? "yes" : "no";
             gameQuestions[i][0] = String.valueOf(randomNumber);
             gameQuestions[i][1] = correctAnswer;

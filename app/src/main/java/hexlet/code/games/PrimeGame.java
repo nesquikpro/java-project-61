@@ -1,11 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
+import hexlet.code.utils.Utils;
 
 public final class PrimeGame {
-    /**
-     * Game description.
-     */
     private static final String DESCRIPTION = "Answer 'yes' if given "
             + "number is prime. Otherwise answer 'no'.";
 
@@ -13,11 +11,10 @@ public final class PrimeGame {
      * Start of the game.
      */
     public static void startGame() {
-        int rounds = GameEngine.getRoundsCount();
-        String[][] gameQuestions = new String[rounds][2];
+        String[][] gameQuestions = new String[GameEngine.ROUNDS_COUNT][2];
 
-        for (int i = 0; i < rounds; i++) {
-            int randomNumber = GameEngine.getRandomNumber();
+        for (int i = 0; i < GameEngine.ROUNDS_COUNT; i++) {
+            int randomNumber = Utils.getDefaultRandomNumber();
             gameQuestions[i][0] = Integer.toString(randomNumber);
             gameQuestions[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
@@ -25,10 +22,6 @@ public final class PrimeGame {
         GameEngine.runGame(DESCRIPTION, gameQuestions);
     }
 
-    /**
-     * @param number tested number.
-     * @return prime number or not. true or false.
-     */
     private static boolean isPrime(final int number) {
             if (number < 2) {
                 return false;

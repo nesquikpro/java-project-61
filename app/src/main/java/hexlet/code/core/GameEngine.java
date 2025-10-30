@@ -1,33 +1,12 @@
 package hexlet.code.core;
 
 import java.util.Scanner;
-import java.util.Random;
 
 public final class GameEngine {
-    /**
-     * Generate random number.
-     */
-    private static Random random = new Random();
 
-    /**
-     * Max numbers from 0 to 100.
-     */
-    private static final int RANDOM_NUMBERS = 101;
+    public static final int ROUNDS_COUNT = 3;
 
-    /**
-     * Questions count.
-     */
-    private static final int ROUNDS_COUNT = 3;
-
-    /**
-     * User input field.
-     */
     private static final Scanner USER_INPUT = new Scanner(System.in);
-
-    /**
-     * Name user.
-     */
-    private static String userName;
 
     /**
      * @param description rules of the game.
@@ -35,8 +14,13 @@ public final class GameEngine {
      */
     public static void runGame(final String description,
                                final String[][] gameQuestions) {
-        greetUser();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = USER_INPUT.nextLine();
+        System.out.println("Hello, " + userName + "!");
+
         System.out.println(description);
+
         for (String[] gameQuestion : gameQuestions) {
             String question = gameQuestion[0];
             String correctAnswer = gameQuestion[1];
@@ -57,38 +41,6 @@ public final class GameEngine {
 
         System.out.println("Congratulations, " + userName + "!");
         System.exit(0);
-    }
-
-    /**
-     * Greeting user.
-     */
-    public static void greetUser() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        userName = USER_INPUT.nextLine();
-        System.out.println("Hello, " + userName + "!");
-    }
-
-    /**
-     * @return the count of rounds.
-     */
-    public static int getRoundsCount() {
-        return ROUNDS_COUNT;
-    }
-
-    /**
-     * @param range for random numbers.
-     * @return number from range.
-     */
-    public static int getRandomNumber(final int range) {
-        return random.nextInt(range);
-    }
-
-    /**
-     * @return number from 0 to 100.
-     */
-    public static int getRandomNumber() {
-        return random.nextInt(RANDOM_NUMBERS);
     }
 
     private GameEngine() {
