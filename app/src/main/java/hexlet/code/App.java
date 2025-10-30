@@ -66,7 +66,7 @@ public final class App {
                     PrimeGame.startGame();
                     break;
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Incorrect user choice: " + userChoice);
                     System.out.println();
                     break;
             }

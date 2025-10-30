@@ -27,20 +27,24 @@ public final class CalculatorGame {
             String operator = OPERATORS[GameEngine.getRandomNumber(
                     OPERATORS.length)];
 
-            int result = switch (operator) {
-                case "+" -> firstNumber + secondNumber;
-                case "-" -> firstNumber - secondNumber;
-                case "*" -> firstNumber * secondNumber;
-                default -> throw new IllegalArgumentException(
-                        "Invalid operator: " + operator);
-            };
-
             gameQuestions[i][0] = firstNumber + " " + operator
                     + " " + secondNumber;
-            gameQuestions[i][1] = String.valueOf(result);
+            gameQuestions[i][1] = String.valueOf(calculate(operator,
+                    firstNumber, secondNumber));
         }
 
         GameEngine.runGame(DESCRIPTION, gameQuestions);
+    }
+
+    private static int calculate(final String operator,
+                                 final int a, final int b) {
+        return switch (operator) {
+            case " + " -> a + b;
+            case " - " -> a - b;
+            case " * " -> a * b;
+            default -> throw new IllegalArgumentException(
+                    "Invalid operator: " + operator);
+        };
     }
 
     private CalculatorGame() {

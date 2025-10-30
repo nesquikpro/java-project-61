@@ -24,30 +24,37 @@ public final class ProgressionGame {
         for (int i = 0; i < rounds; i++) {
             int a = GameEngine.getRandomNumber();
             int d = GameEngine.getRandomNumber(PROGRESS_LENGTH);
-            int hiddenNumber = GameEngine.getRandomNumber(PROGRESS_LENGTH);
+            int hiddenIndex = GameEngine.getRandomNumber(PROGRESS_LENGTH);
 
-            StringBuilder sb = new StringBuilder();
-            String correctAnswer = "";
-
-            for (int j = 0; j < PROGRESS_LENGTH; j++) {
-                var current = String.valueOf(a + j * d);
-
-                if (hiddenNumber == j) {
-                    correctAnswer = current;
-                    sb.append("..");
-                } else {
-                    sb.append(current);
-                }
-                sb.append(" ");
-            }
-
-            gameQuestions[i][0] = sb.toString();
-            gameQuestions[i][1] = correctAnswer;
+            String[] progressionData = generateProgression(a, d, hiddenIndex);
+            gameQuestions[i][0] = progressionData[0];
+            gameQuestions[i][1] = progressionData[1];
         }
 
         GameEngine.runGame(DESCRIPTION, gameQuestions);
     }
 
+    private static String[] generateProgression(final int a, final int d,
+                                                final int hiddenIndex) {
+        StringBuilder sb = new StringBuilder();
+        String correctAnswer = "";
+
+        for (int j = 0; j < PROGRESS_LENGTH; j++) {
+            var current = String.valueOf(a + j * d);
+
+            if (hiddenIndex == j) {
+                correctAnswer = current;
+                sb.append("..");
+            } else {
+                sb.append(current);
+            }
+            sb.append(" ");
+        }
+
+        return new String[] {
+                sb.toString(), correctAnswer
+        };
+    }
     private ProgressionGame() {
 
     }
