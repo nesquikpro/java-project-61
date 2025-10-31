@@ -6,6 +6,7 @@ import hexlet.code.games.CalculatorGame;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.ProgressionGame;
 import hexlet.code.games.PrimeGame;
+import hexlet.code.utils.Cli;
 
 import java.util.Scanner;
 
@@ -45,10 +46,7 @@ public final class App {
                     running = false;
                     break;
                 case "1":
-                    System.out.println("Welcome to the Brain Games!");
-                    System.out.print("May I have your name? ");
-                    String userName = scanner.nextLine();
-                    System.out.println("Hello, " + userName + "!");
+                    Cli.greet();
                     System.exit(0);
                     break;
                 case "2":

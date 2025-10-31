@@ -1,5 +1,7 @@
 package hexlet.code.core;
 
+import hexlet.code.utils.Cli;
+
 import java.util.Scanner;
 
 public final class GameEngine {
@@ -14,10 +16,7 @@ public final class GameEngine {
      */
     public static void runGame(final String description,
                                final String[][] gameQuestions) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String userName = USER_INPUT.nextLine();
-        System.out.println("Hello, " + userName + "!");
+        String userName = Cli.greet();
 
         System.out.println(description);
 
