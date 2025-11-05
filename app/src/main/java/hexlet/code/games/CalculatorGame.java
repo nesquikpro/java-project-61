@@ -1,13 +1,17 @@
 package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
-import hexlet.code.utils.Utils;
+
+import java.util.Random;
 
 public final class CalculatorGame {
     private static final String DESCRIPTION = "What is the result "
             + "of the expression?";
 
     private static final String[] OPERATORS = {"+", "-", "*"};
+
+    private static final Random RANDOM_GENERATOR = new Random();
+    private static final int DEFAULT_MAX = 51;
 
     /**
      * Start of the game.
@@ -16,9 +20,9 @@ public final class CalculatorGame {
         String[][] gameQuestions = new String[GameEngine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < GameEngine.ROUNDS_COUNT; i++) {
-            int firstNumber = Utils.getDefaultRandomNumber();
-            int secondNumber = Utils.getDefaultRandomNumber();
-            String operator = OPERATORS[Utils.getRandomNumberFromRange(OPERATORS.length)];
+            int firstNumber = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
+            int secondNumber = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
+            String operator = OPERATORS[RANDOM_GENERATOR.nextInt(OPERATORS.length)];
 
             gameQuestions[i][0] = firstNumber + " " + operator
                     + " " + secondNumber;

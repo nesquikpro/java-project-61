@@ -1,11 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
-import hexlet.code.utils.Utils;
+
+import java.util.Random;
 
 public final class GcdGame {
     private static final String DESCRIPTION = "Find the greatest common "
             + "divisor of given numbers.";
+
+    private static final Random RANDOM_GENERATOR = new Random();
+    private static final int DEFAULT_MAX = 101;
 
     /**
      * Start of the game.
@@ -14,8 +18,8 @@ public final class GcdGame {
         String[][] gameQuestions = new String[GameEngine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < GameEngine.ROUNDS_COUNT; i++) {
-            int a = Utils.getDefaultRandomNumber();
-            int b = Utils.getDefaultRandomNumber();
+            int a = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
+            int b = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
             int correctAnswer = getGCD(a, b);
 
             gameQuestions[i][0] = a + " " + b;

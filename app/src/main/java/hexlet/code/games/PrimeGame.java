@@ -1,11 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.core.GameEngine;
-import hexlet.code.utils.Utils;
+
+import java.util.Random;
 
 public final class PrimeGame {
     private static final String DESCRIPTION = "Answer 'yes' if given "
             + "number is prime. Otherwise answer 'no'.";
+
+    private static final Random RANDOM_GENERATOR = new Random();
+    private static final int DEFAULT_MAX = 51;
 
     /**
      * Start of the game.
@@ -14,7 +18,7 @@ public final class PrimeGame {
         String[][] gameQuestions = new String[GameEngine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < GameEngine.ROUNDS_COUNT; i++) {
-            int randomNumber = Utils.getDefaultRandomNumber();
+            int randomNumber = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
             gameQuestions[i][0] = Integer.toString(randomNumber);
             gameQuestions[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
