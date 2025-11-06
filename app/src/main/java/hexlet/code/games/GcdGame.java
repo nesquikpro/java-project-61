@@ -20,7 +20,7 @@ public final class GcdGame {
         for (int i = 0; i < GameEngine.ROUNDS_COUNT; i++) {
             int a = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
             int b = RANDOM_GENERATOR.nextInt(DEFAULT_MAX);
-            int correctAnswer = getGCD(a, b);
+            int correctAnswer = gcd(a, b);
 
             gameQuestions[i][0] = a + " " + b;
             gameQuestions[i][1] = String.valueOf(correctAnswer);
@@ -29,7 +29,7 @@ public final class GcdGame {
         GameEngine.runGame(DESCRIPTION, gameQuestions);
     }
 
-    private static int getGCD(final int a, final int b) {
+    private static int gcd(final int a, final int b) {
         int x = a;
         int y = b;
         while (y != 0) {
